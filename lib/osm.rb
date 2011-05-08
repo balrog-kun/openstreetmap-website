@@ -498,7 +498,8 @@ module OSM
 
   # Return an SQL fragment to select a given area of the globe
   def self.sql_for_area(minlat, minlon, maxlat, maxlon, prefix = nil)
-	tilesql = QuadTile.sql_for_area(minlat, minlon, maxlat, maxlon, prefix)
+    tilesql = QuadTile.sql_for_area(minlat, minlon, maxlat, maxlon, prefix)
+
     minlat = (minlat * 10000000).round
     minlon = (minlon * 10000000).round
     maxlat = (maxlat * 10000000).round
